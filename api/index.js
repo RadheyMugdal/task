@@ -1,13 +1,13 @@
 const express = require('express');
-const data = require('./data/data.js');
+const data = require('../data/data.js');
 const cors = require('cors');
-express.use(cors(
+const app = express();
+app.use(cors(
     {
         origin: '*',
     optionsSuccessStatus: 200
     }
 ));
-const app = express();
 
 
 app.use(express.json());
