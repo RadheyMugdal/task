@@ -3,7 +3,13 @@ const data=require('./data.js')
 const cors=require('cors')
 
 express()
-    .use(cors())
+    .use(cors(
+        {
+            origin:'*',
+            methods:'GET,POST,PUT,DELETE,OPTIONS',
+            allowedHeaders:['Content-Type','Authorization','X-Requested-With']
+        }
+    ))
     .use(express.json())
     .get('/',(req,res)=>{
         res.send(data)
