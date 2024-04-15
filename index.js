@@ -13,12 +13,11 @@ app.use(cors(
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send(data);
+    res.json(data);
 });
 
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
-export default app;
+s
 
