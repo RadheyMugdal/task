@@ -200,4 +200,5 @@ const data=[
       "isActive": true
     }
   ]
-  module.exports=data
+
+export default data
